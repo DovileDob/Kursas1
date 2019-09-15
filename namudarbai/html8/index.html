@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html8</title>
+    <style>
+        label {
+            width: 60px;
+            display: inline-block
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Informacija:</legend>
+            <div>
+                <label for="name" >Vardas:</label>
+                <input name="name" type="text"  autofocus>
+            <br>
+                <label for="surname">Pavardė:</label>
+                <input name="surname" type="text" >
+            </div>
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Klausimai:</legend>
+            <div>
+                Kaip sužinojote apie mus?
+                <select name="source">
+                    <option value="Google">Google</option>
+                    <option value="commercial">Reklama</option>
+                    <option value="friends">Draugai</option>
+                    <option value="Other">Kita</option>
+                </select>
+            </div>
+            <p></p>
+            <div>
+                Ar aplankysite vėl? <br>
+                <input type="radio" name="options" value="yes" checked>Taip
+                <input type="radio" name="options" value="no"> Ne
+                <input type="radio" name="options" value="maybe"> Gal
+            </div>
+            <p></p>
+            <div>
+                Ką manot apie kursą? <br>
+                <textarea name="text" rows="10" cols="50" placeholder="Rašykite viską ką galvojate"></textarea>
+            </div>
+            <p></p>
+            <div>
+                Pažymėkite programavimo/žymėjimo kalbas, su kuriomis esate susipažinę: <br>
+                    <input type="checkbox" name="options" value="c#" checked>
+                    <label for="name">C#</label>
+                    <input type="checkbox" name="options" value="java">
+                    <label for="name">Java</label>
+                    <input type="checkbox" name="options" value="php">
+                    <label for="name">php</label>
+                    <br>
+                    <input type="checkbox" name="options" value="html">
+                    <label for="name">html</label>
+                    <input type="checkbox" name="options" value="css">
+                    <label for="name">CSS</label>
+                    <input type="checkbox" name="options" value="javascript">
+                    <label for="name">Javascript</label>
+                    <br>
+                    <input type="checkbox" name="options" value="phyton">
+                    <label for="name">Phyton</label>
+                    <input type="checkbox" name="options" value="ruby">
+                    <label for="name">Ruby</label>
+            </div>
+            <p></p>
+            <input type="submit" name="button" value="Siųsti">
+        </fieldset>
+    </form>
+</body>
+
+</html>
