@@ -1,0 +1,79 @@
+/*main styles file*/
+
+/*1. reset styles
+** 2. header
+** 3. footer
+*/
+
+/*1. reset*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/*2. header*/
+
+#header p{
+    border: 1px solid red;
+    border-radius: 5px;
+    max-width: 400px;
+} 
+#header .overflow-hidden {
+    overflow: hidden;
+}
+
+#header h1 {
+    padding: 15px;
+    margin: 0;
+    background: yellow;
+}
+.visibility-hidden {
+    visibility: hidden;
+}
+.display-none {
+    display: none;
+}
+#nav-wraper {
+    background: orange;
+    min-height: 60px
+}
+#nav-wraper a {
+    color: white;
+    padding: 20px;
+    margin: 30px;
+    border: 1px solid grey;
+}
+#nav {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+@media screen and (max-width: 576px) {
+    #nav {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #nav-wraper a {
+        color: black;
+    }
+}
+/*3. footer*/
+.made-year {
+    bottom: 20px;
+    position: relative;
+
+}
+.love {
+    position: absolute;
+    left: -30px;
+    border: 1px solid red;
+}
+.realative {
+    position: relative;
+}
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    background: green;
+}

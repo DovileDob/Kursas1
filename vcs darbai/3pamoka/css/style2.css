@@ -1,0 +1,17 @@
+div {
+    border: 1px dotted black;
+    width: 200px;
+    height: 200px;
+    margin-right: 5px;
+}
+div:last-child{
+    margin: 0;
+}
+span {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+.color-change{
+    background: green;
+}

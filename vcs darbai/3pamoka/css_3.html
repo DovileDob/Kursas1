@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_3</title>
+    <style>
+        #header {
+            border: 1px;
+            padding: 15px;
+            background: violet;
+            margin: 0;
+        }
+        #sidebar {
+            border: 1px;
+            margin: 0;
+            background: #D2A5FF;
+
+        }
+        #main-color {
+            background: #FFC8FC;
+        }
+        .col-1 
+        width: 33%;
+        }
+        .col-2 {
+            width: 66%;
+        }
+        .col-12 {
+           width: 100%; 
+        }
+        .display-flex {
+            display: flex
+        }
+        .footer-color {
+            background: #FFEBC8;
+        }
+        .side1-color {
+            background: #C8FFE6;
+        }
+        .side2-color {
+            background: #FFD9C8;
+        }
+        .side3-color {
+            background: #D0456D;
+        }
+        [class*="col-"] {
+  padding: 15px;
+    </style>
+</head>
+
+<body>
+    <div class="col-12 display-flex" id="header">header</div>
+    <div class="col-12 display-flex">
+        <div class="col-1 " id="sidebar">sidebar</div>
+        <div class="col-2" id="main-color">main content</div>
+    </div>
+    <div class="col-12 display-flex">
+        <div class="col-1 side1-color">side 1</div>
+        <div class="col-1 side2-color">side 2</div>
+        <div class="col-1 side3-color">side 3</div>
+    </div>
+    <div class="col-12 footer-color display-flex">footer</div>
+</body>
+    
+</html>

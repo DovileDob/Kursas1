@@ -5,7 +5,7 @@ h1{
     border: 1px solid green;
 }
 p, h1 {
-    width; 300px;
+    width; 1000px;
     background-color: grey;
 }
 #second-paragraph {
@@ -34,7 +34,7 @@ html body div.my-content p.hover-change-color:hover {
 }
 .test-box div {
     border: 1px solid #000000;
-    max-width: 100px;
+    max-width: 00px;
     position: relative;
     left: 20px;
     margin: 5px auto;
