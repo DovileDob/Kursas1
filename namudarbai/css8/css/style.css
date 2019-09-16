@@ -1,4 +1,4 @@
-    label {
+label {
     width: 200px;
     display: inline-block
 }
@@ -21,14 +21,20 @@
     background-color: #c2ffbd;
     border: 0;
 }
-table, th, td {
-    border: 1px solid black;
-}
 table {
     border-collapse: collapse;
     width: 100%;
+    border: 1px solid black;
 }
 th {
-   background-color: #4e4180;
+   background-color: #c7b8ff;
+    text-align: center;
+    height: 30px;
 }
-/*failo negaliu pabaigti iki pirmadienio dėl akių uždegimo, pažadu pabaigti pirmadienį dienos metu*/
+td {
+    padding: 8px;
+    border: 1px solid black;
+}
+th:first-child {
+    width: 500px;
+}
