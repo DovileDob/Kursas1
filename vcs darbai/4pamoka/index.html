@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <style>
+        .wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+        }
+        .wrapper > * {
+            border: 1px solid red;
+            flex: 1 100%;
+        }
+        @media screen and (min-width: 600px) {
+            .aside {
+                flex: 1 0 0;
+            }
+        }
+        @media screen and (min-width: 800px) {
+            .main {
+                flex: 3 0 0;
+                order: 2;
+            }
+            .aside-left {
+                order: 1;
+            }
+            .aside-right {
+                order: 3;
+            }
+            .footer {
+                order: 4;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            MY HEADER
+        </header>
+        <article class="main">
+            <p>fbkjwebfwj foiwifnwfnwenfoi fifniewnbobwniofn fowiiidnj dudir n ibiobfif eunihfos iofiwe ubobfobfow ihfoebobf ohfohfe ohoihfe </p>
+        </article>
+        <aside class="aside aside-left">aside1</aside>
+        <aside class="aside aside-right">aside 2</aside>
+        <footer class="footer">footer</footer>
+    </div>
+</body>
+    
+</html>
