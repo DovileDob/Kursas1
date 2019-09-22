@@ -1,0 +1,122 @@
+header, nav, footer {
+    text-align: center;
+}
+header {
+    background: -webkit-linear-gradient(black, green, yellowgreen);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+li {
+    margin: 20px;
+}
+ul {
+    list-style-type: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid #9ede3f;
+    background: #9ede3f;
+    padding: 5px;
+    margin: 10px;
+}
+nav ul li a:hover {
+    border-style: none inset inset none;
+    border-width: 2px;
+    border-color: lightblue;
+}
+/*the begining of main CSS assigment for mobile version*/
+article {
+    background: #f3f4ec;
+    border-radius: 5px;
+    padding: 5px;
+}
+section {
+    background: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+section:hover {
+    border-style: inset;
+    border-width: 1px 2px 2px 1px;
+    border-color: lightblue;
+}
+.align-center {
+    padding: 15px;
+}
+
+img {
+    width: 150px;
+    margin-left: 10px;
+}
+.text-decoration-none {
+    text-decoration: none;
+/*            margin-bottom: 20px*/
+}
+.information {
+    margin: 2px 2px 2px 0;
+    padding: 2px;
+    display: block;
+    float: right;
+    width: 200px;
+}
+.content{
+    overflow: hidden;
+    width:100px;
+    margin: 5px 5px 5px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.price {
+    font-size: 23px;
+    color: #404040;
+    height: 24px;
+    line-height: 24px;
+}
+.old-price {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #6c6f70;
+}
+button {
+    display: none;
+    background-color: #9ede3f;
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+.tax {
+    font-size: 12px;
+    color: #93774a;
+    width: 100%;
+    margin-top: 10px;
+}
+/*the end of main CSS assigment for mobile version*/
+p {
+    font-size: 14px;
+    font-family: monospace
+}
+/*CSS code for desktop version*/
+@media screen and (min-width: 1000px) {
+    .container {
+        flex-direction: row;
+        display: flex
+    }
+    section {
+        max-width: 200px;
+    }
+    button {
+        display: block;
+    }
+            li {
+    display: inline;
+}
+    .information {
+        width: 160px;
+    }
+}
