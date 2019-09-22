@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="lt">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+</head>
+
+<body>
+    
+    <div id="main-content" class="content"></div>
+    <!--Javascript before closing body-->
+    <script>
+        /** 
+        * 1. declarations 
+        **/
+        var myVarUndefined, sumResult, finaOutput, promtText, whichPositionIsMySymbol; // typeOf undefined
+        var hasItemClassHello = true; // typeOf boolen
+        var firstNumber = 5; // typeOf number
+        var secondNumber = '3'; // typeOf string
+        var hellotext = 'Labukas pasauli'; // typeOf string
+        
+        // 2 calculations, functions, overwrites
+        hellotext = 'Labas!'; // overwrite var helloText
+        sumResult = firstNumber + firstNumber; // expected value is 10
+        //promtText = prompt ('enter your age', '17');
+        finaOutput = hellotext +'&nbsp;'+ secondNumber + '&nbsp;' + sumResult;
+        whichPositionIsMySymbol = hellotext.indexOf('a'); // expecred output 1 not 3
+        LengthOfString = hellotext.length;
+        
+        finaOutput = finaOutput + ' position>' + whichPositionIsMySymbol;
+        finaOutput = finaOutput + ' length of string is >' + LengthOfString;
+        
+        if (whichPositionIsMySymbol > 0) {
+            document.write('okk<br><br>');
+        }
+        if (whichPositionIsMySymbol > 10) {
+            document.write('okk 2_1<br><br>');       
+                    
+        } else {
+            document.write('okk 2_2<br><br>');
+        }
+        (whichPositionIsMySymbol > 10) ? document.write('okk2525<br><br>'):document.write('okk5<br><br>');
+        
+        // 3. output
+        document.write(finaOutput);
+        console.log(finaOutput);
+        document.getElementById('main-content').innerHTML = '<b>yes</b>';
+        //document.write(promtText);
+    </script>
+</body>
+    
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        .wrapper {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .wrapper > * {
+            flex: 1 100%;
+            border-radius: 5px;
+            margin: 2px;
+        }
+        header {
+            text-align: center;
+            background: #ffeebb;
+            border: 1px solid orange;
+            padding: 15px
+        }
+        footer {
+            background: #ffeebb;
+            border: 1px solid orange;
+            min-height: 40px;
+        }
+        article {
+            background: #dddd88;
+            border: 1px solid green;
+            padding: 5px;
+        }
+        aside {
+            background: #ccccff;
+            border: 1px solid blue;
+            min-height: 40px;
+        }
+        @media screen and (min-width: 600px) {
+            .aside {
+                flex: 1 0 0;
+            }
+        }
+        @media screen and (min-width: 1000px) {
+            .main {
+                flex: 3 0 0;
+                order: 2;
+            }
+            .nav {
+                order: 1;
+            }
+            .aside-right {
+                order: 3;
+            }
+            .footer {
+                order: 4;
+            }
+        }
+        img {
+            max-height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            Responsive Layout using FLEXBOX
+        </header>
+        <article class="main">
+            article
+            <p></p>
+            <img src="photo/14969468914_d822dc06e4_b.jpg">
+            <br>
+            https://live.staticflickr.com/3945/14969468914_d822dc06e4_b.jpg
+            <p>Barleywine lagering funkle sparge wit berlined weisse brew brewing heat echanger? all-malt dunkle hand pump lauter tun shelf life. ibu, all-malt, hops anaerobic, specific gracity? cask conditioning, barley sparge sparge dry hopping hop back adjunct anerobic; biere de garde, wheat beer glass black malt oxidized shelf life additive attenuation bacterial bung microbrewery </p>
+        </article>
+        <aside class="aside nav">nav</aside>
+        <aside class="aside aside-right">aside 2</aside>
+        <footer class="footer">MDN: httt=p://developer.mozilla.rg?en-US.docs/Web/Guide/CSS/Flexible_boxes</footer>
+    </div> 
+</body>
+    
+</html>
