@@ -12,18 +12,18 @@
         <input type="text" id="age" onchange="checkAge(this.value);" />
         <button name="null">Submit</button>
         <div id="result"></div>
-<script>
 
-function checkAge(age) {
-    if(age>=18) {
-        var result = 'TRUE';
-    }
-    else {
-        var result = 'FALSE';
-    }
-    document.getElementById('result').innerHTML = result;
-}
-</script>
+        <script>
+            function checkAge(age) {
+                if(age>=18) {
+                    var result = 'TRUE';
+                }
+                else {
+                    var result = 'FALSE';
+                }
+                document.getElementById('result').innerHTML = result;
+            }
+        </script>
 </body>
 
 </html>
