@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS5</title>
+</head>
+
+<body>
+        Age:
+        <input type="text" id="age" onchange="checkAge(this.value);" />
+        <button name="null">Submit</button>
+        <div id="result"></div>
+<script>
+
+function checkAge(age) {
+    if(age>=18) {
+        var result = 'TRUE';
+    }
+    else {
+        var result = 'FALSE';
+    }
+    document.getElementById('result').innerHTML = result;
+}
+</script>
+</body>
+
+</html>
