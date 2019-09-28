@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS5</title>
+</head>
+
+<body>
+        Name:
+        <input type="Name" id="first-name" onchange="firstName();" />
+        Surname:
+        <input type="surname" id="last-name" onchange="lastName(this.value);">
+        <button name="null">Submit</button>
+
+        <script>
+            var person = {
+            document.getElementById('first-name').innerHTML = firstName;
+            document.getElementById('last-name').innerHTML = lastName;
+            }
+
+            var signIn = {
+                fullName: function() {
+                    return this.firtName + ' ' + this.lastName;
+                }
+            }
+            alert(fullName);
+        </script>
+</body>
+
+</html>
