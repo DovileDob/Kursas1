@@ -8,24 +8,20 @@
 </head>
 
 <body>
-        Name:
-        <input type="Name" id="first-name" onchange="firstName();" />
-        Surname:
-        <input type="surname" id="last-name" onchange="lastName(this.value);">
-        <button name="null">Submit</button>
-
+        <form>
+            First Name:
+            <input type="text" id="first-name" />
+            Last Name:
+            <input type="text" id="last-name">
+            <input type="submit" value="Welcome" onclick="welcomingText()">
+        </form>
         <script>
-            var person = {
-            document.getElementById('first-name').innerHTML = firstName;
-            document.getElementById('last-name').innerHTML = lastName;
+            function welcomingText () {
+                var firstName = document.getElementById('first-name').value;
+                var lastName = document.getElementById('last-name').value;
+                var fullName = firstName + ' ' + lastName;
+                document.write(fullName + ' just sign in');
             }
-
-            var signIn = {
-                fullName: function() {
-                    return this.firtName + ' ' + this.lastName;
-                }
-            }
-            alert(fullName);
         </script>
 </body>
 
