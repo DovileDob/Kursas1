@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS9</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <Style>
+        table {
+            font-family: sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+
+        }
+        td, th {
+            border: 1px solid white;
+            padding:8px;
+        }
+        th {
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: orangered;
+        }
+        tr:nth-child(even) {
+            background-color: grey;
+        }
+        tr:first-child, tr:nth-child(3) {
+            background-color: lightgrey;
+        }
+    </Style>
+</head>
+
+<body>
+    <h1>Viešbučiai (su laisvais kambariais
+    )</h1>
+    <h2>Radisson</h2>
+    <h3>Konstitucijos pr. 29</h3>
+    <table id="myTable">
+        <tr>
+            <th>Kambario numeris</th>
+            <th>Žmonių skaičius</th>
+            <th>Kaina</th>
+        </tr>
+        <tbody id="tableData"></tbody>
+    </table>
+    <p></p>
+    <h2>Vilnius Inn</h2>
+    <h3>Šiaulių g. 3</h3>
+    <table id="myTable">
+        <tr>
+            <th>Kambario numeris</th>
+            <th>Žmonių skaičius</th>
+            <th>Kaina</th>
+        </tr>
+        <tbody id="tableDataSecond"></tbody>
+    </table>
+
+    <script>
+        let sortDirection = false;
+        var viesbuciai = [
+            {
+            "name": "Radisson",
+            "Address": "Konstitucijos pr. 29",
+            "Rooms":[
+                {"Number":210, "GuestCount":2, "Price":100},
+                {"Number":211, "GuestCount":2, "Price":110},
+                {"Number":212, "GuestCount":2, "Price":109}
+            ]
+            },
+            {
+            "name": "Vilnius Inn",
+            "Address": "Šiaulių g. 3",
+            "Rooms":[
+                {"Number":11, "GuestCount":2, "Price":100},
+                {"Number":15, "GuestCount":1, "Price":58},
+                {"Number":22, "GuestCount":2, "Price":80},
+                {"Number":23, "GuestCount":2, "Price":99}
+            ]
+            }
+        ];
+        //console.log(viesbuciai[0].Rooms, viesbuciai[1].Rooms)
+        window.onload = () => {
+            makingTheTable(viesbuciai);
+        };
+
+        function makingTheTable(viesbuciai) {
+            var viesbucioKaina = viesbuciai[0].Rooms;
+            var viesbucioKainaSecond = viesbuciai[1].Rooms;
+            const tableBody = document.getElementById('tableData');
+            let dataHtml = '';
+            const tableBodySecond = document.getElementById('tableDataSecond');
+            let dataHtmlSecond = '';
+                for(let place of viesbucioKaina) {
+                    dataHtml += `<tr><td>${place.Number}</td><td>${place.GuestCount}</td><td>${place.Price}</td></tr>`;
+                }
+                for(let place of viesbucioKainaSecond) {
+                    dataHtmlSecond += `<tr><td>${place.Number}</td><td>${place.GuestCount}</td><td>${place.Price}</td></tr>`;
+                }
+            tableBody.innerHTML = dataHtml;
+            tableBodySecond.innerHTML = dataHtmlSecond;
+        }
+
+    </script>
+</body>
+
+</html>
