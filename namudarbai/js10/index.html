@@ -14,21 +14,19 @@
         var objektas1 = {"id":1,"item":"Atsuktuvas","date":"2018","color":"geltona","price": "5"};
         var objektas2 = {"id":2,"item":"Raktas","date":"2018","color":"pilka","price": "2"};
         var objektuMasyvas = [objektas1, objektas2];
-        //objektuMasyvas.forEach(myFunction)
 
 
-        /**for (var key in objektuMasyvas) {
+        for (var key in objektuMasyvas) {
             var value = objektuMasyvas[key];
             console.log(key, value);
-        }**/
+        }
 
-        /**function myFunction(key, value) {
-            console.log(key + ': ' + value);
-        }**/
-
-        /**$.each(objektas1, function (key, value) {
-            console.log(key + ': ' + value);
+        /**$.each(objektuMasyvas, function (key, value) {
+            JSON.stringify(value);
+            console.dir(value);
         });**/
+
+        //po 3h mastymo pasiduodu, bent jau kol kas
     </script>
 </body>
 
