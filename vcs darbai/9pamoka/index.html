@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <style>
+        h2 {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="my-text"></div>
+    <button id="alert-button">ALERT</button>
+    <input type="text" value="very very big pig">
+    <h2>My heading</h2>
+    <button id="animate-button">Animate my heading</button>
+    <script>
+        var $text = 'hello world!';
+        var myArray = ['jonas', 'milda', 'tomas', 'ona'];
+        $('input:text').val(); // getting value
+        $('input:text').val('very very small pig'); // setting new value
+        alert($('input:text').val());
+        
+        //$('div#my-text').val = $text;
+        $.each(myArray, function (index, value) {
+           console.log(index + ': ' + value); 
+        });
+        /**$('#alert-button').click(function () {
+            alert('asd');
+        });**/
+        $('#alert-button').on('click', function () {
+            alert('asd');
+        });
+        $('h2').hover( function () {
+            $('h2').css('color', 'red');
+        });
+        $('h2').mouseleave( function () {
+            $('h2').css({'color': 'black', 'font-size': '48px'});
+        });
+        $('#animate-button').on('click', function () {
+            $('h2').animate({left: '300px', fontSize: '60px'},
+                            500,
+                            function () {
+                                    var looksTragedy = $('<div></div>');
+                                    looksTragedy.prop('id', 'tragedy'); // i have <div id="tragedy></div>
+                                    looksTragedy.append('<p>Tragedy</p>');
+                                    $('#animate-button').after(looksTragedy);
+                                }
+                           );
+        });
+    </script>
+</body>
+
+</html>

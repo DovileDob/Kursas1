@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS3</title>
+</head>
+
+<body>
+    <div id="calculate-button" onclick="saveValue();">Calculate</div>
+    <div id="clear-result-button" onclick="clearResultDiv();">Clear Result</div>
+    <div id="result"></div>
+    <div id="show-biggest-numbet-button" onclick="biggestNumber(4, 10, 20);">Show Biggest Number</div>
+    <div onclick="devideNumbers(25, 5);">Devide Numbers</div>
+    <div id="duplicated-value"></div>
+    <div id="counter"></div>
+    <script>
+        function calculateResult () {
+            alert('yes it\'s working');
+        }
+        var countHowManyTimes = 0;
+        function saveValue () {
+
+            var firstNumber = prompt('enter x value');
+            var secondNumber = prompt('enter y value');
+            firstNumber = Number(firstNumber);
+            secondNumber = Number(secondNumber);
+            
+            function sumUp (x = 3, y = 2) {
+                var result = x + y;
+                return result;
+            }
+
+            var sumResult = sumUp(firstNumber, secondNumber);
+            var newResultDiv = document.getElementById('duplicated-value');
+            var totalSumResult;
+            var tempTotalSumResult = Number(newResultDiv.innerHTML);
+            if ((tempTotalSumResult + sumResult) < 100) {
+                totalSumResult = tempTotalSumResult  + sumResult;
+            }
+            else {
+                totalSumResult = tempTotalSumResult - sumResult;
+            }
+            
+            newResultDiv.innerHTML = totalSumResult;
+            document.getElementById('result').innerHTML = sumResult;
+            
+            countHowManyTimes++;
+            document.getElementById('counter').innerHTML = countHowManyTimes;
+        }
+        function clearResultDiv () {
+                document.getElementById('result').innerHTML = '';
+            }
+        function insertValueIntoDiv () {}
+            //function call in fuction
+        function biggestNumber (x, y, z) {
+            if (x>y) {
+                    if (x>z) {
+                        result = x;
+                    }
+                } else if (y>z) {
+                    result = y;
+                } else {
+                    result = z;
+                }
+            alert ('Biggest numbet is ' + result);
+        }
+        function devideNumbers (x, y) {
+            var result = x/y;
+            var myArray = [x, y, result];
+            var isNumbersRepeats;
+            for (var i = 0; i < myArray.length; i++) {
+                if (myArray[1] == myArray[2]) {
+                    isNumbersRepeats = true;
+                }
+            }
+            (isNumbersRepeats) ? alert('SAME') : '';
+        }
+        function sumUpAndInsert (x, y = 10) {
+            var result = x + y;
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+    
+</html>

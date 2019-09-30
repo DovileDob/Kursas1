@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS4</title>
+</head>
+
+<body>
+    <p>Get biggest number from any lenght array</p>
+    <p id="result"></p>
+    <script>
+        var myArray = [1, 70, 40, 33, 10, 98, 200];
+        function getMaxNumber () {
+            var biggestNumber = 0;
+            for (let i = 0; i < myArray.length; i++) {
+                if (myArray[i] > biggestNumber) {
+                    biggestNumber = myArray[i];
+                }
+
+            }
+
+        }
+            document.getElementById('result').innerHTML = biggestNumber;
+        /**function getMaxNumber2 () {
+            var biggestNumber = -Infinity;
+            for (let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > biggestNumber) {
+                    biggestNumber = arguments[i];
+                }
+            }
+            return biggestNumber;
+        }
+        document.getElementById('result').innerHTML = getMaxNumber2(2, 5);**/
+        /**myArray.length
+        function**/
+    </script>
+</body>
+    
+</html>
