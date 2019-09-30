@@ -57,7 +57,6 @@
     </table>
 
     <script>
-        let sortDirection = false;
         var viesbuciai = [
             {
             "name": "Radisson",
@@ -87,9 +86,9 @@
         function makingTheTable(viesbuciai) {
             var viesbucioKaina = viesbuciai[0].Rooms;
             var viesbucioKainaSecond = viesbuciai[1].Rooms;
-            const tableBody = document.getElementById('tableData');
+            let tableBody = document.getElementById('tableData');
             let dataHtml = '';
-            const tableBodySecond = document.getElementById('tableDataSecond');
+            let tableBodySecond = document.getElementById('tableDataSecond');
             let dataHtmlSecond = '';
                 for(let place of viesbucioKaina) {
                     dataHtml += `<tr><td>${place.Number}</td><td>${place.GuestCount}</td><td>${place.Price}</td></tr>`;
